@@ -9,13 +9,15 @@ namespace Lucky_Ticket
             char[] ticketChar = ticket.ToCharArray();
             int firstHalf=0;
             int secondHalf=0;
-            for (int i = 0; i <= ticket.Length / 2 - 1; i++)
+            for (int i = 0; i < ticket.Length / 2; i++)
             {
-                firstHalf = +Convert.ToInt32(new string(ticketChar[i], 1));
+                firstHalf = firstHalf + Convert.ToInt32(new string(ticketChar[i], 1));
+                
             };
-            for (int i = ticket.Length / 2; i < ticket.Length; i++)
+            for (int i = ticket.Length / 2; i < ticket.Length ; i++)
             {
-                secondHalf = + Convert.ToInt32(new string(ticketChar[i], 1));
+                secondHalf = secondHalf+  Convert.ToInt32(new string(ticketChar[i], 1));
+                
             };
             if(firstHalf == secondHalf)
             {
